@@ -11,9 +11,11 @@ const ToggleButton = ({ isLeftContainerOpen, toggleLeftContainer }) => {
           style={{ left: buttonLeftPosition }}
         >
           {isLeftContainerOpen ? (
-            <LeftOutlined style={{ fontSize: '24px', color: '#B75210' }} />
+            <span>&lt;&lt;</span>
+            // <LeftOutlined style={{ fontSize: '24px', color: '#B75210' }} />
           ) : (
-            <RightOutlined style={{ fontSize: '24px', color: '#B75210' }} />
+            <span>&gt;&gt;</span>
+            // <RightOutlined style={{ fontSize: '24px', color: '#B75210' }} />
           )}
         </button>
       </div>
