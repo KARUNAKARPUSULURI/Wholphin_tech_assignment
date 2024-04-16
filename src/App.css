@@ -25,14 +25,13 @@ a {
   flex: 22%;
   background-color: whitesmoke;
   padding: 30px 20px;
-  height: 100vh;
+  height: 50rem;
   transition: transform 1s ease-in-out;
 }
 .left-container.closed {
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
 }
-
 
 .back-icon {
   margin: 25px 0 15px 0;
@@ -131,7 +130,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50rem;
   transition: flex 0.3s ease-in-out;
 }
 .right-container.full {
