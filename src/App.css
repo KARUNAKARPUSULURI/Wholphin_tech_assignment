@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: black;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.left-container {
+  flex: 22%;
+  background-color: whitesmoke;
+  padding: 30px 20px;
+  height: 100vh;
+  transition: transform 1s ease-in-out;
+}
+.left-container.closed {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.back-icon {
+  margin: 25px 0 15px 0;
+  color: #c4c4c4;
+}
+
+.heading {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif; 
+  font-optical-sizing: auto;
+  font-weight: 700; 
+  font-style: normal;
+  font-size: 1.6rem;
+  letter-spacing:3px
+}
+
+.icons-container {
+  display: flex;
+  margin: 30px 0; 
+}
+
+.icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-right: 20px;
+}
+
+.icon {
+  background-color: rgb(197, 193, 193);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #262626;
+}
+
+.icon i {
+  font-size: 25px;
+}
+
+.icon-text {
+  margin: 8px 0 0 0;
+}
+
+.details {
+  margin: 20px 0 30px 0; 
+}
+
+.description h1 {
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+}
+
+.more {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  margin-bottom: 30px; 
+}
+
+.btn-1 {
+  background-color: rgb(183, 82, 14);
   color: white;
+  border: transparent;
+  width: 200px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-2 {
+  width: 100px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+  font-size: 1rem;
+  color: rgb(183, 82, 14);
+  border: 2px solid rgb(183, 82, 14);
+  box-shadow: -1px 1px 5px black;
+  cursor: pointer;
+}
+.right-container {
+  flex: 78%;
+  background-image: url("./Assets/background-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: flex 0.3s ease-in-out;
+}
+.right-container.full {
+  flex: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.statue-container {
+  position: relative;
+}
+
+.statue {
+  width: 160px;
+  height: auto;
+  position: relative;
+}
+.statue::before {
+  content: '';
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 70%); 
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.toggle-btn button {
+  position: absolute;
+  top: 106px;
+  width: 40px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(197, 193, 193);
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+  color: rgb(183, 82, 14);
+}
+
+@media screen and (max-width: 1330px) {
+  .toggle-btn button {
+    left: 343px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .main-container {
+    width: inherit;
+    height: inherit;
+  }
+
+  .left-container { 
+    flex: 20%;
+    padding: 0 10px;
+    width: 230px;
+  }
+
+  .right-container {
+    flex: 80%;
   }
 }
