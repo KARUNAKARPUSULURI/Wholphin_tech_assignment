@@ -27,6 +27,7 @@ a {
   padding: 30px 20px;
   height: 52rem;
   transition: transform 1s ease-in-out;
+  
 }
 .left-container.closed {
   transform: translateX(-100%);
@@ -132,6 +133,7 @@ a {
   background-size: cover;
   height: 52rem;
   transition: flex 0.3s ease-in-out;
+ 
 }
 .right-container.full {
   flex: 100%;
@@ -161,7 +163,7 @@ a {
 
 .toggle-btn button {
   position: absolute;
-  top: 106px;
+  top: 95px;
   width: 40px;
   height: 25px;
   display: grid;
@@ -172,14 +174,66 @@ a {
   cursor: pointer;
   color: rgb(183, 82, 14);
 }
+/* media queries */
+@media screen and (max-width: 1200px) {
+  .left-container {
+    flex: 30%;
+  }
+  
+  .right-container {
+    flex: 70%;
+  }
+}
+media screen and (max-width: 992px) {
+  .left-container {
+    flex: 35%;
+  }
+  
+  .right-container {
+    flex: 65%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left-container {
+    flex: 40%;
+  }
+  
+  .right-container {
+    flex: 60%;
+  }
+  
+  
+}
+@media screen and (max-width: 576px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .left-container {
+    order: 2; 
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-grow: 1; 
+    padding: 20px;
+  }
+  .right-container {
+    order: 1; 
+    width: 100%;
+    height: auto;
+  }
 
-@media screen and (max-width: 1330px) {
+  /* .toggle-btn {
+    display: none;
+  } */
+}
+
+/* @media screen and (max-width: 1330px) {
   .toggle-btn button {
     left: 343px;
   }
-}
+} */
 
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
   body {
     height: 100vh;
     width: 100%;
@@ -199,4 +253,4 @@ a {
   .right-container {
     flex: 80%;
   }
-}
+} */

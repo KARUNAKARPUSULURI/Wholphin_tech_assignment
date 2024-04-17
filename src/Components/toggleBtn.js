@@ -2,7 +2,7 @@ import React from 'react';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 
 const ToggleButton = ({ isLeftContainerOpen, toggleLeftContainer }) => {
-    const buttonLeftPosition = isLeftContainerOpen ? '22.4%' : '-1%';
+    const buttonLeftPosition = isLeftContainerOpen ? '334px': '-1px';
   
     return (
       <div className="toggle-btn">
