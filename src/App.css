@@ -97,7 +97,7 @@ a {
 
 .buttons {
   display: flex;
-  margin-bottom: 50px; 
+  margin: 50px 0px; 
 }
 
 .btn-1 {
